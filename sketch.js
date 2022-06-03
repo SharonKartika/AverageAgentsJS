@@ -64,10 +64,10 @@ function makeSliders() {
     vabsslider = createSlider(0.01, 10, vabs, 0.05);
     Nslider = createSlider(10, 500, N, 5);
 
-    etaslider.position(0, 0);
-    rslider.position(0, etaslider.position().y + 40);
-    vabsslider.position(0, rslider.position().y + 40);
-    Nslider.position(0, vabsslider.position().y + 40);
+    etaslider.position(width, 0);
+    rslider.position(width, etaslider.position().y + 40);
+    vabsslider.position(width, rslider.position().y + 40);
+    Nslider.position(width, vabsslider.position().y + 40);
 
     etaslider.input(() => {
         eta = etaslider.value();
@@ -151,7 +151,7 @@ function setup() {
 }
 
 function draw() {
-    background(0, 20);
+    background(0, 40);
     calcthetas();
     for (let i = 0; i < N; i++) {
         M[i].update();
